@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Showing cars</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>Model</th>
+                <th>HorsePower</th>
+                <th>DoorCount</th>
+            </tr>
+            <tr th:each = "list : ${cars}">
+                <td th:utext="${list.getModel()}"/>
+                <td th:utext="${list.getHorsePower()}"/>
+                <td th:utext="${list.getDoorCount()}"/>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
